@@ -1,28 +1,10 @@
-== README
+# TuConstituyes
+[![Build Status](https://travis-ci.org/IIC2113-2015-2-Grupo1/TuConstituyes.svg?branch=master)](https://travis-ci.org/IIC2113-2015-2-Grupo1/TuConstituyes)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Getting Started
+```sh
+$ git clone https://github.com/IIC2113-2015-2-Grupo1/TuConstituyes.git
+$ cd TuConstituyes
+$ bundle install
+```
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
