@@ -1,0 +1,4 @@
+test:
+  adapter: postgresql
+  database: TuConstituyes_test
+  username: postgres
