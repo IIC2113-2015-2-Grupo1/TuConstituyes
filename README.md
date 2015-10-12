@@ -5,8 +5,16 @@
 > * Linter: [rubocop](https://github.com/bbatsov/rubocop)
 
 ### Getting Started
+
+Prepare project:
 ```sh
 $ git clone https://github.com/IIC2113-2015-2-Grupo1/TuConstituyes.git
 $ cd TuConstituyes
 $ bundle install
+```
+
+Start:
+```sh
+# Uses puma as webserver. Settings at 'config/puma.rb'
+$ puma
 ```
