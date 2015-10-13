@@ -17,6 +17,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Use Puma as the app server
 gem 'puma'
+gem 'rubocop', require: false
 
 group :development, :test do
   gem 'byebug'
