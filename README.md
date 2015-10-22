@@ -18,3 +18,17 @@ Start:
 # Uses puma as webserver. Settings at 'config/puma.rb'
 $ puma
 ```
+
+### Deployment
+
+```sh
+# Build
+$ docker build --no-cache --rm --tag=tuconstituyes .
+
+# Run
+$ docker run --publish 3000:3000 --rm --name tuconstituyes tuconstituyes
+
+# Push to hub
+$ docker tag tuconstituyes iic2113grupo1/tuconstituyes
+$ docker push iic2113grupo1/tuconstituyes
+```
