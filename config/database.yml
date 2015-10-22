@@ -79,7 +79,11 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
+  timeout: 5000
   database: TuConstituyes_production
-  username: TuConstituyes
-  password: <%= ENV['TUCONSTITUYES_DATABASE_PASSWORD'] %>
+  pool: 5
+  host: db
+  port: 5432
+  username: postgres
+  password: <%= ENV["DB_ENV_POSTGRES_PASSWORD"] %>
