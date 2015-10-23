@@ -16,15 +16,31 @@ $ bundle install
 Start:
 ```sh
 # Uses puma as webserver. Settings at 'config/puma.rb'
-$ puma
+$ rails s
 ```
 
-### Deployment
+### Docker
+Make sure to set the same key or passwords will become invalid.
+```sh
+$ export SECRET_KEY_BASE="LONG_HASH"
+```
 
+To setup with docker in `PRODUCTION` enviorement:
 ```sh
 # Build
 $ docker build --no-cache --rm --tag=tuconstituyes .
 
 # Run
-$ docker run --publish 3000:3000 --rm --name=tuconstituyes tuconstituyes
+$ docker-compose up -d
+
+# First time run
+$ docker-compose run web rake db:setup
+
+# Just migrate
+$ docker-compose run web rake db:migrate
+```
+
+To stop:
+```sh
+$ docker-compose stop
 ```
