@@ -2,10 +2,14 @@ AllCops:
   RunRailsCops: true
   Exclude:
     - 'db/schema.rb'
+    - 'db/migrate/*.rb'
     - 'config/**/*'
 
 Style/Encoding:
   Enabled: false
 
 Metrics/LineLength:
-  Max: 80
+  Max: 100
+
+Rails/HasAndBelongsToMany:
+  Enabled: false
