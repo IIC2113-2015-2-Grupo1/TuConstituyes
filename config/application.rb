@@ -22,5 +22,14 @@ module TuConstituyes
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
     config.active_record.raise_in_transactional_callbacks = true
+
+    console do
+      # Auto connect to database on '$ rails console'
+      ActiveRecord::Base.connection
+
+      # Auto pretty print
+      require 'awesome_print'
+      AwesomePrint.irb!
+    end
   end
 end

@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_and_belongs_to_many :sources
-  has_many :tags
+  has_and_belongs_to_many :subscriptions, class_name: 'Source'
+  has_many :created_tags, class_name: 'Tag'
   belongs_to :region
 end
