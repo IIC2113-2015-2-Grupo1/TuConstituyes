@@ -1,5 +1,5 @@
 class SourcesController < ApplicationController
   def index
-    Source.all
+    @news_items = NewsItem.all
   end
 end
