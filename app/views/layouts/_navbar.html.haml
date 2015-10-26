@@ -1,0 +1,17 @@
+%nav.navbar.navbar-default
+  / application logo
+  = link_to "TuConstituyes", sources_path, :class => "navbar-brand"
+  / main nav toggler (show/hide)
+  %a.toggle-nav.btn.pull-left{:href => "#"}
+    %i.icon-reorder
+  / dropdowns
+  %ul.nav
+    %li.dropdown.dark.user-menu
+      -if @current_user
+        = link_to @current_user.name, sources_path, :class => "dropdown-toggle"
+      -else
+        = link_to "Login", sources_path, :class => "dropdown-toggle"
+  %form.navbar-form.navbar-right.hidden-xs
+    %button.btn.btn-link.icon-search
+    .form-group
+      %input#q_header.form-control{:autocomplete => "off", :name => "q", :placeholder => "Search...", :type => "text", :value => ""}/

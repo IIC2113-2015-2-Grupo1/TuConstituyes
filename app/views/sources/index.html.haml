@@ -1,0 +1,13 @@
+%h1 Noticias
+
+.row
+  -@news_items.each do |new_item| 
+    .col-sm-6.col-md-4
+      .thumbnail
+        .caption
+          %h3
+            = new_item.title
+          %p
+            = new_item.body
+          %p
+            =link_to "Comentar", news_item_path(new_item.id)

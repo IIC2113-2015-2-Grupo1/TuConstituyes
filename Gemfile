@@ -18,6 +18,9 @@ gem 'devise'
 # Use Puma as the app server
 gem 'puma'
 
+gem 'haml-rails', '>= 0.3.4'
+gem "compass-rails", ">= 2.0.5"
+
 group :development, :test do
   gem 'rubocop', require: false
   gem 'annotate'
