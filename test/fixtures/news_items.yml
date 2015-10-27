@@ -1,3 +1,18 @@
+# == Schema Information
+#
+# Table name: news_items
+#
+#  id         :integer          not null, primary key
+#  title      :string
+#  body       :text
+#  image      :string
+#  url        :string
+#  source_id  :integer
+#  tag_id     :integer
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:

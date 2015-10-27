@@ -12,15 +12,23 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'simple_form'
+gem 'devise'
 
 # Use Puma as the app server
 gem 'puma'
-gem 'devise'
+
+gem 'haml-rails', '>= 0.3.4'
+gem "compass-rails", ">= 2.0.5"
 
 group :development, :test do
+  gem 'rubocop', require: false
+  gem 'annotate'
   gem 'byebug'
+  gem 'awesome_print'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'rspec-rails', '~> 3.0'
   gem 'web-console', '~> 2.0'
   gem 'spring'
 end
