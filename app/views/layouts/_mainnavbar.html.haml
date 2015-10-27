@@ -1,0 +1,36 @@
+%nav#main-nav
+  .navigation
+    / search form visible on phone
+    .search
+      %form
+        .search-wrapper
+          %input.search-query.form-control{:autocomplete => "off", :name => "q", :placeholder => "Search...", :type => "text", :value => ""}/
+          %button.btn.btn-link.icon-search{:name => "button"}
+    / navigation items
+    %ul.nav.nav-stacked
+      / single navigation item
+      %li.active
+        = link_to sources_path do
+          %i.icon-home 
+          %span 
+            Home
+      %li
+        = link_to sources_path do
+          %i.icon-book
+          %span
+            Educación 
+      %li
+        = link_to sources_path do
+          %i.icon-heart
+          %span
+            Salud
+      %li
+        = link_to sources_path do
+          %i.icon-money
+          %span
+            Economía 
+      %li
+        = link_to sources_path do
+          %i.icon-bullhorn
+          %span
+            Cultura
