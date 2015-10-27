@@ -19,7 +19,7 @@ gem 'devise'
 gem 'puma'
 
 gem 'haml-rails', '>= 0.3.4'
-gem "compass-rails", ">= 2.0.5"
+gem 'bootstrap-sass', '~> 3.3.5'
 
 group :development, :test do
   gem 'rubocop', require: false
