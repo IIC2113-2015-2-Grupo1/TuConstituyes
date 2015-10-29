@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151012005341) do
+ActiveRecord::Schema.define(version: 20151029144633) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,6 +39,14 @@ ActiveRecord::Schema.define(version: 20151012005341) do
 
   add_index "news_items", ["source_id"], name: "index_news_items_on_source_id", using: :btree
   add_index "news_items", ["tag_id"], name: "index_news_items_on_tag_id", using: :btree
+
+  create_table "news_items_tags", force: :cascade do |t|
+    t.integer "news_item_id"
+    t.integer "tag_id"
+  end
+
+  add_index "news_items_tags", ["news_item_id"], name: "index_news_items_tags_on_news_item_id", using: :btree
+  add_index "news_items_tags", ["tag_id"], name: "index_news_items_tags_on_tag_id", using: :btree
 
   create_table "regions", force: :cascade do |t|
     t.string   "name"
