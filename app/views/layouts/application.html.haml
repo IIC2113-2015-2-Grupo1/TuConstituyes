@@ -6,7 +6,43 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
+    %link{:href => "https://fonts.googleapis.com/css?family=Oswald", :rel => "stylesheet", :type => "text/css"}/
   %body
     %wrapper
+      %nav.navbar.navbar-default
+        %container-fluid
+          .navbar-header
+            %button.navbar-toggle.collapsed{"aria-expanded" => "false", "data-target" => "#bs-example-navbar-collapse-1", "data-toggle" => "collapse", :type => "button"}
+              %span.sr-only Toggle navigation
+              %span.icon-bar
+              %span.icon-bar
+              %span.icon-bar
+            %a.navbar-brand#blue{:href => "#"} TúConstituyes
+        #bs-example-navbar-collapse-1.collapse.navbar-collapse
+          %ul.nav.navbar-nav
+            %li.active
+              %a{:href => "#"}
+                Noticias
+                %span.sr-only (current)
+            %li
+              %a{:href => "#"} Fuentes
+          %form.navbar-form.navbar-left{:role => "search"}
+            .form-group
+              %input.form-control{:placeholder => "Buscar noticias", :type => "text"}/
+            %button.btn.btn-default{:type => "submit"} Buscar
+          %ul.nav.navbar-nav.navbar-right
+            %li.dropdown
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                Mi cuenta
+                %span.caret
+              %ul.dropdown-menu
+                %li
+                  %a{:href => "#"} Mis suscripciones
+                %li
+                  %a{:href => "#"} Mis etiquetas
+                %li
+                  %a{:href => "#"} Mi región
+            %li
+              %a{:href => "#"} Cerrar Sesión
       %container
         = yield
