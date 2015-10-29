@@ -1,7 +1,10 @@
 Rails.application.routes.draw do
+
+  get 'welcome/index'
+
   devise_for :users
 
-  resources :sources, path: '/', shallow: true do
+  resources :sources, shallow: true do
     resources :news_items do
       # resources :comments
     end
@@ -19,7 +22,7 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

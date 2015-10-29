@@ -1,0 +1,19 @@
+.card-box.col-md-4.col-sm-6
+  .card{"data-background" => "image", "data-src" => "http://hordago.org/wp-content/uploads/2012/10/procesoConstituyente.jpg"}
+    .header
+      .category
+        - locals[:news_item].tags do |tag|
+          %h6.label.label-danger 
+            = tag.tag_name 
+    .content
+      %h6.category
+        = locals[:news_item].source.name
+      %h4.title.title-uppercase
+        = link_to locals[:news_item].title , locals[:news_item].url 
+      %p.description 
+        -if locals[:news_item].body.length > 100
+          = locals[:news_item].body[0..100] + "..."
+        -else
+          = locals[:news_item].body
+    .filter
+  / end card
