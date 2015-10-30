@@ -1,12 +1,21 @@
 .card-box.col-md-4.col-sm-6
-        .card
-          .content
-            %h6.category locals[:news_item].source.name
-            %h4.title
-              = link_to locals[:news_item].title , locals[:news_item].url 
-            %p.description 
-            -if locals[:news_item].body.length > 100
-         	  = locals[:news_item].body[0..100] + "..."
-            -else
-              = locals[:news_item].body
-        / end card
+  .card
+    .content
+      = link_to locals[:news_item].source do
+        %h6.category 
+          = locals[:news_item].source.name
+      %h4.title
+        = link_to locals[:news_item].title , locals[:news_item]
+      %p.description 
+        -if locals[:news_item].body.length > 150
+          = locals[:news_item].body[0..150] + "..."
+          = link_to "Seguir Leyendo" , locals[:news_item]
+        -else
+          = locals[:news_item].body
+          = link_to "Seguir Leyendo" , locals[:news_item]
+      .category  
+        - locals[:news_item].tags.each do |tag|
+          =link_to tag do
+            %h6.label.label-danger 
+              = tag.tag_name 
+  / end card

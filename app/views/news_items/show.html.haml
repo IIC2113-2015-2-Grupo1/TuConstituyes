@@ -1,2 +1,20 @@
-%h1 NewsItems#show
-%p Find me in app/views/news_items/show.html.haml
+.card-box.col-md-8.col-md-offset-2
+  .card
+    .title{"data-background" => "image", "data-src" => @news_item.image}
+      %h1
+        = @news_item.title
+    .title-content
+      %h5
+        = link_to @news_item.source.name, @news_item.source
+        | Link:
+        = link_to @news_item.url, @news_item.url
+      %p
+        = @news_item.body
+      .tags
+        Tags:
+        - @news_item.tags.each do |tag|
+          =link_to tag do
+            %h6.label.label-danger 
+              = tag.tag_name
+    .comments
+      
