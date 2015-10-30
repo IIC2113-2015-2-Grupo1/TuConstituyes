@@ -1,9 +1,11 @@
+<center><h1 class="navbar-brand">Tú Constituyes</h1></center>
 <br>
 <br>
 <br>
+
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h4><%= t('.sign_in', :default => "Sign in") %></h4>
+    <h2 class="nav li">Iniciar Sesión</h2>
   </div>
   <div class="panel-body">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: "form" }) do |f| %>
@@ -23,10 +25,15 @@
       </label>
     </div>
     <% end %>
-    <%= f.submit  t('.sign_in', :default => "Sign in"), class: "btn btn-primary" %>
+    <%= f.submit  t('.sign_in', :default => "Iniciar sesión"), class: "btn btn-primary" %>
+    <%= link_to "Iniciar con Facebook", user_omniauth_authorize_path(:facebook),class: "btn btn-primary btn-default" %>
     <% end %>
-    <%= link_to "Sign in with Facebook", user_omniauth_authorize_path(:facebook) %>
+    
   </div>
 </div>
 <%= render "devise/shared/links" %>
 <!-- prueba comentario -->
+
+
+    
+  
