@@ -1,27 +1,28 @@
 .card-box.col-md-4.col-sm-6
-  .card{"data-background" => "image", "data-src" => locals[:news_item].image}
+  .card
     .header
+      %img{:src => locals[:news_item].image}/
+      .filter
+      .category
+        - locals[:news_item].tags.each do |tag|
+          =link_to tag do
+            %h6.label.label-danger 
+              = tag.tag_name 
       .actions
         = link_to locals[:news_item] do
           %button.btn.btn-round.btn-fill.btn-neutral.btn-modern
             Leer Articulo
-      .categorys
-        - locals[:news_item].tags.each do |tag|
-          = link_to tag do
-            %h6.label.label-danger 
-              = tag.tag_name 
     .content
       = link_to locals[:news_item].source do
         %h6.category
           = locals[:news_item].source.name
-      %h4.title.title-uppercase
-        = link_to locals[:news_item].title , locals[:news_item] 
-      %p.description 
+      %h4.title
+        = link_to locals[:news_item].title , locals[:news_item]
+      %p.description
         -if locals[:news_item].body.length > 100
           = locals[:news_item].body[0..100] + "..."
           = link_to "Seguir Leyendo" , locals[:news_item]
         -else
           = locals[:news_item].body
           = link_to "Seguir Leyendo" , locals[:news_item]
-    .filter
   / end card
