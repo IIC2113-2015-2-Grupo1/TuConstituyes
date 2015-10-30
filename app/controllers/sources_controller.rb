@@ -3,3 +3,4 @@ class SourcesController < ApplicationController
     @news_items = NewsItem.all
   end
 end
+# r
