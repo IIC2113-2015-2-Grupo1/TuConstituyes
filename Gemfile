@@ -20,6 +20,7 @@ gem 'puma'
 
 gem 'haml-rails', '>= 0.3.4'
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'devise-bootstrap-views'
 
 group :development, :test do
   gem 'rubocop', require: false
