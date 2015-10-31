@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   get 'welcome/index'
 
+  resources :user
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
 
   resources :sources, shallow: true do
@@ -12,10 +13,6 @@ Rails.application.routes.draw do
 
   resources :tags, shallow: true do
     resources :news_items
-  end
-
-  resources :user do
-
   end
 
   # The priority is based upon order of creation: first created -> highest priority.

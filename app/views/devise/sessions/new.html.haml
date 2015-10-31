@@ -1,0 +1,19 @@
+.container
+  .col-lg-4.col-lg-offset-4
+    = form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: "form", class: 'form-signin' }) do |f|
+      %h2.form-signin-heading Iniciar sesión
+      .form-group
+        = f.label :email
+        = f.email_field :email, autofocus: true, class: "form-control", :placeholder => "Email"
+      .form-group
+        = f.label :Contraseña
+        = f.password_field :password, autocomplete: "off", class: "form-control", :placeholder => "Contraseña"
+      - if devise_mapping.rememberable?
+        .checkbox
+          %label
+            = f.check_box :remember_me
+            = f.label :remember_me
+      = f.submit  t('.sign_in', :default => "Iniciar sesión"), class: "btn btn-primary"
+      = link_to "Iniciar con Facebook", user_omniauth_authorize_path(:facebook),class: "btn btn-primary"
+    = render "devise/shared/links"
+    / prueba comentario

@@ -1,0 +1,10 @@
+nav {
+  font-family: 'Oswald', sans-serif;
+}
+.jumbotron {
+  font-family: 'Oswald', sans-serif;
+  background-color: transparent;
+  color: white;
+  margin-left: 20px;
+  margin-right: 20px;
+}

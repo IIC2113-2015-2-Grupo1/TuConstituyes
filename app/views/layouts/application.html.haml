@@ -17,7 +17,7 @@
               %span.icon-bar
               %span.icon-bar
               %span.icon-bar
-            %a.navbar-brand#blue{:href => "#"} TúConstituyes
+            = link_to 'TúConstituyes', root_path, class: 'navbar-brand'
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li.active
@@ -43,6 +43,6 @@
                 %li
                   %a{:href => "#"} Mi región
             %li
-              %a{:href => "#"} Cerrar Sesión
+              = link_to 'Cerrar Sesión', destroy_user_session_path
       %container
         = yield

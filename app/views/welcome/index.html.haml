@@ -1,3 +1,6 @@
 /TODO agregar distintas cartas según la información disponible
+.jumbotron.text-center
+  %h1 TúConstituyes
+  %p TúConstituyes es una plataforma para que te mantengas informado acerca del proceso constituyente que está viviendo nuestro país. Porque creemos que la mejor forma de hacerte partícipe del cambio en la Constitución es conociendo la realidad que te rodea. Acércate, infórmate, opina, y toma la democracia en tus manos.
 - @news_items.each do |news_item|
   = render 'cards/card%i' % [1,2,3].sample , :locals => {:news_item => news_item}
