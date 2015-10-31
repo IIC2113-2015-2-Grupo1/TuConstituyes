@@ -17,9 +17,11 @@ gem 'devise'
 
 # Use Puma as the app server
 gem 'puma'
-
 gem 'haml-rails', '>= 0.3.4'
 gem 'bootstrap-sass', '~> 3.3.5'
+gem 'devise-bootstrap-views'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 group :development, :test do
   gem 'rubocop', require: false
