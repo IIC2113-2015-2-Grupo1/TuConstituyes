@@ -21,6 +21,7 @@
 #  rut                    :string
 #  provider               :string
 #  uid                    :string
+#  name                   :string
 #
 
 require 'test_helper'
