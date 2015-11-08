@@ -15,7 +15,7 @@ end
 (1..20).each do |i|
   news_item = NewsItem.new
   news_item.title = "noticia #{i}"
-  news_item.url = "http://www.noticia#{1}.cl"
+  news_item.url = "http://www.noticia#{i}.cl"
   news_item.body = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat vulputate lobortis. Etiam eleifend cursus orci, sed lobortis quam blandit eget. Nulla ac augue risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam tempor lacinia mauris et placerat. Aenean finibus nec magna a pharetra. Morbi at imperdiet risus. Pellentesque tincidunt vestibulum nibh id bibendum. Curabitur nec lobortis nulla. Nullam aliquam vestibulum nisl eu dapibus. Pellentesque quis nulla vitae tortor sollicitudin fringilla vel eget mi. Cras efficitur pretium tortor, convallis feugiat lacus efficitur nec. Mauris blandit augue magna, at faucibus mi suscipit a. Interdum et malesuada fames ac ante ipsum primis in faucibus. '
   news_item.source = Source.all.sample
   news_item.tags = Tag.all.sample(3)
@@ -39,7 +39,7 @@ image = ['http://hordago.org/wp-content/uploads/2012/10/procesoConstituyente.jpg
 
 (1..20).each do |i|
   NewsItem.create(title: "Noticia #{i}",
-                  url: "http://www.noticia#{1}.cl",
+                  url: "http://www.noticia#{i}.cl",
                   body: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat vulputate lobortis. Etiam eleifend cursus orci, sed lobortis quam blandit eget. Nulla ac augue risus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nam tempor lacinia mauris et placerat. Aenean finibus nec magna a pharetra. Morbi at imperdiet risus. Pellentesque tincidunt vestibulum nibh id bibendum. Curabitur nec lobortis nulla. Nullam aliquam vestibulum nisl eu dapibus. Pellentesque quis nulla vitae tortor sollicitudin fringilla vel eget mi. Cras efficitur pretium tortor, convallis feugiat lacus efficitur nec. Mauris blandit augue magna, at faucibus mi suscipit a. Interdum et malesuada fames ac ante ipsum primis in faucibus. ',
                   source: Source.all.sample,
                   tags: Tag.all.sample(3),

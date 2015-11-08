@@ -2,17 +2,30 @@ AllCops:
   RunRailsCops: true
   Exclude:
     - 'db/schema.rb'
+    - 'db/seeds.rb'
     - 'db/migrate/*.rb'
     - 'config/**/*'
 
+# Not needed on Ruby 2.0+
 Style/Encoding:
   Enabled: false
 
+# Used by default by some gems
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+# Do not force innecesary documentation
 Style/Documentation:
   Enabled: false
 
+# Rails uses by default lines longer than 80
 Metrics/LineLength:
   Max: 100
 
+# Omniauth uses at least a value of 16
+Metrics/AbcSize:
+  Max: 16
+
+# Do not force relationships
 Rails/HasAndBelongsToMany:
   Enabled: false
