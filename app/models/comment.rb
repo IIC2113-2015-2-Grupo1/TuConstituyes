@@ -4,7 +4,7 @@
 #
 #  id           :integer          not null, primary key
 #  content      :text
-#  starred      :boolean
+#  starred      :boolean          default(FALSE)
 #  news_item_id :integer
 #  created_at   :datetime         not null
 #  updated_at   :datetime         not null
