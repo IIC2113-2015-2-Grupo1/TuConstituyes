@@ -19,6 +19,8 @@
 #  updated_at             :datetime         not null
 #  gender                 :string
 #  rut                    :string
+#  provider               :string
+#  uid                    :string
 #
 
 class User < ActiveRecord::Base
@@ -27,6 +29,9 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
+
+  validates :name, :email, :rut, presence: true
+  validates :rut, rut: true
 
   has_and_belongs_to_many :subscriptions, class_name: 'Source'
   has_many :created_tags, class_name: 'Tag'

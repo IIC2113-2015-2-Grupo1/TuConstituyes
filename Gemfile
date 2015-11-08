@@ -14,6 +14,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 
 gem 'simple_form'
 gem 'devise'
+gem 'rut_validation'
 
 # Use Puma as the app server
 gem 'puma'

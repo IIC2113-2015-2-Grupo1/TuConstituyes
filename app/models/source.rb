@@ -11,6 +11,9 @@
 #
 
 class Source < ActiveRecord::Base
+  validates :name, presence: true
+  validates :url, presence: true
+
   has_and_belongs_to_many :followers, class_name: 'User'
   has_many :news_items
 end

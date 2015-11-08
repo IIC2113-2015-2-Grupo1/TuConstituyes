@@ -11,5 +11,8 @@
 #
 
 class Comment < ActiveRecord::Base
+  validates :content, presence: true
+  validates :news_item_id, presence: true
+
   belongs_to :news_item
 end
