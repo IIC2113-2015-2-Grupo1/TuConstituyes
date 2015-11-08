@@ -16,6 +16,8 @@ gem 'simple_form'
 gem 'devise'
 gem 'rut_validation'
 
+gem 'faker'
+
 # Use Puma as the app server
 gem 'puma'
 gem 'haml-rails', '>= 0.3.4'
@@ -25,6 +27,8 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 
 group :development, :test do
+  gem 'factory_girl_rails', '~> 4.0'
+  gem 'shoulda-matchers', '~> 3.0'
   gem 'rubocop', require: false
   gem 'annotate'
   gem 'byebug'
