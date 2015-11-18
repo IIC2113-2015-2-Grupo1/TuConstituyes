@@ -3,6 +3,8 @@ default: &default
   encoding: unicode
   host: localhost
   pool: 5
+  host: /var/run/postgresql
+
 
 development:
   <<: *default

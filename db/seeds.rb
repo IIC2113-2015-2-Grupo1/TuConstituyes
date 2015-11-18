@@ -1,10 +1,36 @@
-(1..5).each do |i|
-	source = Source.new
-	source.name = "fuente #{i}"
-	source.url = "http://www.fuente#{i}.cl"
-	source.description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam placerat vulputate lobortis."
-	source.save
-end
+source = Source.new
+source.name = 'El Mostrador'
+source.url = 'http://www.elmostrador.cl'
+source.description = "Los Principios Editoriales que rigen al diario EL MOSTRADOR
+son la independencia,  el pluralismo  informativo, el respeto y valoración
+positiva de la diversidad, la promoción de los derechos humanos y civiles, la
+fiscalización  de  los  poderes  establecidos y el diálogo ciudadano con o a
+través de los medios"
+source.save
+
+source = Source.new
+source.name = 'La Cuarta'
+source.url = 'http://www.lacuarta.com/'
+source.description = 'El diario La Cuarta en su version digital.'
+source.save
+
+source = Source.new
+source.name = 'La Lupa de la Constitución'
+source.url = 'http://www.lalupadelaconstitucion.cl/'
+source.description = 'Este es un aporte a la discusión de la creación de una
+nueva Constitución y responde a una iniciativa de fomentar la participación
+ciudadana y de la educación cívica, ya que a través de infografías y videos
+cortos se explican diferencias, términos, alcances, impactos y se compara el
+marco regulatorio chileno con la región.'
+source.save
+
+source = Source.new
+source.name = 'La Tercera'
+source.url = 'http://www.latercera.com/'
+source.description = 'El diario La Tercera en su version digital.'
+source.save
+
+
 
 
 (1..10).each do |i|
@@ -22,7 +48,7 @@ end
 	news_item.tags = Tag.all.sample(3)
 	news_item.save
 end
-=======
+
 (1..5).each do |i|
 	Source.create({
 		name: "Fuente #{i}",
