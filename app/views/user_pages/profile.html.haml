@@ -1,0 +1,17 @@
+.card-box.col-md-offset-3.col-sm-6
+  .card.card-with-border{"data-background" => "color", "data-color" => "azure"}
+    .header
+      .icon
+        %i.fa.fa-user
+    .content.text-center
+      %h4.title.title-modern
+        = @user.email
+      %h4
+        = @user.gender != nil ? @user.gender : 'No ha especificado su género'
+      %h4
+        = @user.rut != nil ? @user.rut : 'No ha especificado su RUT'
+      %h4
+        = @user.region != nil ? @user.region : 'No ha especificado su región'
+    .footer.text-center
+      = link_to '#', class: 'btn btn-neutral btn-round' do
+        Editar cuenta

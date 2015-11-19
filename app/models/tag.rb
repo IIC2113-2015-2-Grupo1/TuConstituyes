@@ -11,6 +11,8 @@
 #
 
 class Tag < ActiveRecord::Base
+  validates :tag_name, presence: true
+
   has_and_belongs_to_many :news_items
   belongs_to :creator, class_name: 'User'
 end

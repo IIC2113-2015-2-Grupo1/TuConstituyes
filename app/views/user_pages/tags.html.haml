@@ -1,0 +1,17 @@
+.card-box.col-md-offset-3.col-sm-6
+  .card.card-with-border{"data-background" => "color", "data-color" => "azure"}
+    .header
+      .icon
+        %i.fa.fa-tags
+    .content.text-center
+      %h4
+        Tus Tags
+    .footer.text-center
+      - if @user_tags.count > 0
+        - @user_tags.each do |tag|
+          %h6.label.label-danger
+            tag.tag_name
+      - else
+        %h4.text-center Aún no tienes ningún tag
+      = link_to root_path, class: 'btn btn-neutral btn-round' do
+        Volver a noticias

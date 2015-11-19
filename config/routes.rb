@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'user_pages/profile'
+  get 'user_pages/region'
+  get 'user_pages/tags'
 
   get 'welcome/index'
 
@@ -22,6 +25,9 @@ Rails.application.routes.draw do
   resources :tags, shallow: true do
     resources :news_items
   end
+  resources :news_items
+
+  get 'welcome/index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

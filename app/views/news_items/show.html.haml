@@ -2,7 +2,7 @@
   .card
     .title{"data-background" => "image", "data-src" => @news_item.image}
       %h1
-        = @news_item.title
+        = @news_item.title.upcase
     .title-content
       %h5
         = link_to @news_item.source.name, @news_item.source

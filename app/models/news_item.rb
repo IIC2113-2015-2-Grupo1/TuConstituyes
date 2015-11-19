@@ -14,7 +14,15 @@
 #
 
 class NewsItem < ActiveRecord::Base
+  validates :title, presence: true
+  validates :body, presence: true
+  validates :url, presence: true
+
   has_and_belongs_to_many :tags
   belongs_to :source
   has_many :comments
+
+  def self.search(search)
+    where("title LIKE ?", "%#{search}")
+  end
 end

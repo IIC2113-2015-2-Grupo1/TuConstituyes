@@ -10,10 +10,11 @@
 #  updated_at  :datetime         not null
 #
 
-class Source < ActiveRecord::Base
-  validates :name, presence: true
-  validates :url, presence: true
+require 'rails_helper'
 
-  has_and_belongs_to_many :followers, class_name: 'User'
-  has_many :news_items
+RSpec.describe Source, type: :model do
+  it { should validate_presence_of(:name) }
+  it { should validate_presence_of(:url) }
+  it { have_and_belong_to_many(:followers) }
+  it { have_many(:news_items) }
 end

@@ -9,5 +9,7 @@
 #
 
 class Region < ActiveRecord::Base
+  validates :name, presence: true
+
   has_many :citizens, class_name: 'User'
 end

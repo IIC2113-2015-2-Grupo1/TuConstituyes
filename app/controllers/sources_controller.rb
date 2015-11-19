@@ -3,14 +3,14 @@ class SourcesController < ApplicationController
 
   def index
     @news_items = NewsItem.all
+    @sources = Source.all
   end
 
   def show
-  	@news_items = @source.news_items
+    @news_items = @source.news_items
   end
 
   def set_source
-  	@source = Source.find(params[:id])
+    @source = Source.find(params[:id])
   end
 end
-# r
