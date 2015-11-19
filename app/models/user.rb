@@ -31,27 +31,30 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable,
          :omniauthable, omniauth_providers: [:facebook]
 
-  validates :name, :email, :rut, presence: true
-  validates :rut, rut: true
+  validates :name, :email, presence: true
+
 
   has_and_belongs_to_many :subscriptions, class_name: 'Source'
   has_many :created_tags, class_name: 'Tag'
   belongs_to :region
 
+  
+
+
   def self.from_omniauth(auth)
     where(provider: auth.provider, uid: auth.uid).first_or_create do |user|
       user.email = auth.info.email
       user.password = Devise.friendly_token[0, 20]
+      puts user.name
       user.name = auth.info.name # assuming the user model has a name
-      user.image = auth.info.image # assuming the user model has an image
+      #user.image = auth.info.image # assuming the user model has an image
     end
   end
 
   def self.new_with_session(params, session)
     super.tap do |user|
-      data = session['devise.facebook_data']
-      if data && session['devise.facebook_data']['extra']['raw_info']
-        user.email = data['email'] if user.email.blank?
+      if data = session["devise.facebook_data"] && session["devise.facebook_data"]["extra"]["raw_info"]
+        #user.email = data["email"] if user.email.blank?
       end
     end
   end

@@ -43,6 +43,6 @@
                 %li
                   %a{:href => "#"} Mi región
             %li
-              = link_to 'Cerrar Sesión', destroy_user_session_path
+              = link_to 'Cerrar Sesión', destroy_user_session_path, method: :delete
       %container
         = yield
