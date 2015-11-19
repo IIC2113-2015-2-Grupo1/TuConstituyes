@@ -10,6 +10,7 @@
 #  source_id  :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  region_id  :integer
 #
 
 class NewsItem < ActiveRecord::Base
@@ -20,4 +21,8 @@ class NewsItem < ActiveRecord::Base
   has_and_belongs_to_many :tags
   belongs_to :source
   has_many :comments
+
+  def self.search(search)
+    where("title LIKE ?", "%#{search}")
+  end
 end

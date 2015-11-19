@@ -34,6 +34,7 @@ ActiveRecord::Schema.define(version: 20151108143245) do
     t.integer  "source_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "region_id"
   end
 
   add_index "news_items", ["source_id"], name: "index_news_items_on_source_id", using: :btree

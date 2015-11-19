@@ -1165,18 +1165,18 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
   background-size: 250% 250%;
 }
 .card[data-color="azure"] {
-  background: #45c0fd;
-  background: -moz-radial-gradient(center, ellipse cover, #4091ff 0%, #45c0fd 100%);
+  background: #639FAB;
+  background: -moz-radial-gradient(center, ellipse cover, #8EA8C3 0%, #639FAB 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #4091ff), color-stop(100%, #45c0fd));
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #8EA8C3), color-stop(100%, #639FAB));
   /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover, #4091ff 0%, #45c0fd 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #8EA8C3 0%, #639FAB 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover, #4091ff 0%, #45c0fd 100%);
+  background: -o-radial-gradient(center, ellipse cover, #8EA8C3 0%, #639FAB 100%);
   /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover, #4091ff 0%, #45c0fd 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #8EA8C3 0%, #639FAB 100%);
   /* IE10+ */
-  background: radial-gradient(ellipse at center, #4091ff 0%, #45c0fd 100%);
+  background: radial-gradient(ellipse at center, #8EA8C3 0%, #639FAB 100%);
   /* W3C */
   background-size: 250% 250%;
 }
@@ -1267,18 +1267,18 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
 }
 
 .filter.filter-azure {
-  background: #45c0fd;
-  background: -moz-radial-gradient(center, ellipse cover, #4091ff 0%, #45c0fd 100%);
+  background: #639FAB;
+  background: -moz-radial-gradient(center, ellipse cover, #8EA8C3 0%, #639FAB 100%);
   /* FF3.6+ */
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #4091ff), color-stop(100%, #45c0fd));
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, #8EA8C3), color-stop(100%, #639FAB));
   /* Chrome,Safari4+ */
-  background: -webkit-radial-gradient(center, ellipse cover, #4091ff 0%, #45c0fd 100%);
+  background: -webkit-radial-gradient(center, ellipse cover, #8EA8C3 0%, #639FAB 100%);
   /* Chrome10+,Safari5.1+ */
-  background: -o-radial-gradient(center, ellipse cover, #4091ff 0%, #45c0fd 100%);
+  background: -o-radial-gradient(center, ellipse cover, #8EA8C3 0%, #639FAB 100%);
   /* Opera 12+ */
-  background: -ms-radial-gradient(center, ellipse cover, #4091ff 0%, #45c0fd 100%);
+  background: -ms-radial-gradient(center, ellipse cover, #8EA8C3 0%, #639FAB 100%);
   /* IE10+ */
-  background: radial-gradient(ellipse at center, #4091ff 0%, #45c0fd 100%);
+  background: radial-gradient(ellipse at center, #8EA8C3 0%, #639FAB 100%);
   /* W3C */
   background-size: 250% 250%;
 }

@@ -1,0 +1,11 @@
+.card-box.col-md-offset-3.col-sm-6
+  .card.card-with-border{"data-background" => "color", "data-color" => "azure"}
+    .header
+      .icon
+        %i.fa.fa-map-o
+    .content.text-center
+      %h4
+        = @user_region != nil ? @user_region.name : 'No ha configurado su región todavía'
+    .footer.text-center
+      = link_to '#', class: 'btn btn-neutral btn-round' do
+        Editar cuenta
