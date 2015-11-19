@@ -1,4 +1,4 @@
 FROM rails:onbuild
-RUN rake assets:precompile
 ENV RAILS_ENV production
+RUN rake assets:precompile
 EXPOSE 3000

@@ -14,6 +14,10 @@ test:
   <<: *default
   database: TuConstituyes_test
 
+# production:
+#   <<: *default
+#   database: TuConstituyes_production
+
 production:
   adapter: postgresql
   encoding: unicode
