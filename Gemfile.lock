@@ -261,12 +261,9 @@ DEPENDENCIES
   byebug
   devise
   devise-bootstrap-views
-<<<<<<< HEAD
   factory_girl_rails (~> 4.0)
   faker
-=======
   font-awesome-rails
->>>>>>> user-regions
   haml-rails (>= 0.3.4)
   jbuilder (~> 2.0)
   jquery-rails
