@@ -21,15 +21,16 @@
         #bs-example-navbar-collapse-1.collapse.navbar-collapse
           %ul.nav.navbar-nav
             %li.active
-              %a{:href => "#"}
+              = link_to root_path do
                 Noticias
                 %span.sr-only (current)
             %li
-              %a{:href => "#"} Fuentes
-          %form.navbar-form.navbar-left{:role => "search"}
+              = link_to sources_path do
+                Fuentes
+          = form_tag("/news_items", method: "get", class: 'navbar-form navbar-left') do
             .form-group
-              %input.form-control{:placeholder => "Buscar noticias", :type => "text"}/
-            %button.btn.btn-default{:type => "submit"} Buscar
+              = text_field_tag :query
+              = submit_tag "Buscar", class: 'btn btn-default'
           %ul.nav.navbar-nav.navbar-right
             %li.dropdown
               %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
@@ -41,9 +42,7 @@
                 %li
                   = link_to 'Mi región', user_pages_region_path
                 %li
-                  %a{:href => "#"} Mis suscripciones
-                %li
-                  %a{:href => "#"} Mis etiquetas
+                  = link_to 'Mis tags', user_pages_tags_path
             %li
               = link_to 'Cerrar Sesión', destroy_user_session_path
       %container

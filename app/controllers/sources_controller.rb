@@ -3,6 +3,7 @@ class SourcesController < ApplicationController
 
   def index
     @news_items = NewsItem.all
+    @sources = Source.all
   end
 
   def show

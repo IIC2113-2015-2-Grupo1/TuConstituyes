@@ -1,5 +1,5 @@
+/TODO agregar distintas cartas según la información disponible
 .jumbotron.text-center
-  %h1
-    = "Noticias con el tag #{@tag.tag_name.upcase}"
+  %h1 Noticias
 - @news_items.each do |news_item|
   = render 'cards/card%i' % [1,2,3].sample , :locals => {:news_item => news_item}
