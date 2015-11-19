@@ -21,9 +21,8 @@ test:
 production:
   adapter: postgresql
   encoding: unicode
-  username: postgres
-  database: TuConstituyes_production
+  database: postgres
   pool: 5
+  username: postgres
+  password:
   host: db
-  port: 5432
-  timeout: 5000
