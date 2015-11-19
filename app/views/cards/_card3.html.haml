@@ -6,8 +6,8 @@
       .category
         - locals[:news_item].tags.each do |tag|
           =link_to tag do
-            %h6.label.label-danger 
-              = tag.tag_name 
+            %h6.label.label-danger
+              = tag.tag_name
       .actions
         = link_to locals[:news_item] do
           %button.btn.btn-round.btn-fill.btn-neutral.btn-modern
@@ -17,7 +17,7 @@
         %h6.category
           = locals[:news_item].source.name
       %h4.title
-        = link_to locals[:news_item].title , locals[:news_item]
+        = link_to locals[:news_item].title.upcase , locals[:news_item]
       %p.description
         -if locals[:news_item].body.length > 100
           = locals[:news_item].body[0..100] + "..."
