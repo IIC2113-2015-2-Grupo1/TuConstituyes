@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
   end
 
   def load_regions
-    @all_regions |= [
+    @all_regions ||= [
       { name: 'I - Tarapacá', id: 2 },
       { name: 'II - Antofagasta', id: 3 },
       { name: 'III - Atacama', id: 4 },
