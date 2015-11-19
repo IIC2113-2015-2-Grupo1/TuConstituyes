@@ -3,9 +3,9 @@ class NewsItemsController < ApplicationController
   def index
     @news_items = NewsItem.all
     if params[:query]
-      @news_items = NewsItem.search(params[:query]).order("created_at DESC")
+      @news_items = NewsItem.search(params[:query]).order('created_at DESC')
     else
-      @news_items = NewsItem.all.order("created_at DESC")
+      @news_items = NewsItem.all.order('created_at DESC')
     end
   end
 
