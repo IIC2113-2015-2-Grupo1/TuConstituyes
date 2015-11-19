@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+  get 'user_pages/profile'
+  get 'user_pages/region'
+
   get 'welcome/index'
 
   resources :user

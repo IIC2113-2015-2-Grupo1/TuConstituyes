@@ -37,11 +37,13 @@
                 %span.caret
               %ul.dropdown-menu
                 %li
+                  = link_to 'Mi perfil', user_pages_profile_path
+                %li
+                  = link_to 'Mi región', user_pages_region_path
+                %li
                   %a{:href => "#"} Mis suscripciones
                 %li
                   %a{:href => "#"} Mis etiquetas
-                %li
-                  %a{:href => "#"} Mi región
             %li
               = link_to 'Cerrar Sesión', destroy_user_session_path
       %container
