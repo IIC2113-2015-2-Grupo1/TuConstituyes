@@ -19,6 +19,8 @@
 #  updated_at             :datetime         not null
 #  gender                 :string
 #  rut                    :string
+#  provider               :string
+#  uid                    :string
 #
 
 require 'test_helper'

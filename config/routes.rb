@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   get 'welcome/index'
 
   resources :user
@@ -10,6 +11,13 @@ Rails.application.routes.draw do
       # resources :comments
     end
   end
+
+  resources :regions, shallow: true do
+    resources :news_items do
+    end
+  end
+
+
 
   resources :tags, shallow: true do
     resources :news_items

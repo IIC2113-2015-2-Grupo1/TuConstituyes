@@ -24,8 +24,22 @@
               %a{:href => "#"}
                 Noticias
                 %span.sr-only (current)
-            %li
-              %a{:href => "#"} Fuentes
+            %li.dropdown
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                Fuentes
+                %span.caret
+              %ul.dropdown-menu
+                - @all_sources.each do |all_source|
+                  %li
+                    =link_to all_source.name, all_source
+            %li.dropdown
+              %a.dropdown-toggle{"aria-expanded" => "false", "aria-haspopup" => "true", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+                Regiones
+                %span.caret
+              %ul.dropdown-menu
+                - @all_regions.each do |all_region|
+                  %li
+                    =link_to all_region[:name], region_path(all_region[:id])
           %form.navbar-form.navbar-left{:role => "search"}
             .form-group
               %input.form-control{:placeholder => "Buscar noticias", :type => "text"}/

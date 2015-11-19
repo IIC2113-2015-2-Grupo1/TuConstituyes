@@ -8,9 +8,9 @@
 #  image      :string
 #  url        :string
 #  source_id  :integer
-#  tag_id     :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  region_id  :integer
 #
 
 class NewsItem < ActiveRecord::Base
